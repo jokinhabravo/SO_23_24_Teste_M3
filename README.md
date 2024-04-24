@@ -10,7 +10,7 @@ Quando acabares, carrega no botão "Commit Changes".
 
 ## Informação do aluno
 
-    Nome: ...
+    Nome: Tomás Ferreira 
 
 ## P1 - Para as seguintes questões, assinala a opção correta: (2.5v)
 
@@ -21,7 +21,7 @@ Quando acabares, carrega no botão "Commit Changes".
     c) Destinado a usuários individuais
     d) Usado principalmente para jogos
     
-    Resposta: ...
+    Resposta: B
 
   2. Das seguintes, qual é a função mais apropriada para um SO servidor?
 
@@ -30,7 +30,7 @@ Quando acabares, carrega no botão "Commit Changes".
     c) Fornecer software de entretenimento
     d) Gerir recursos e serviços de rede
     
-    Resposta: ...
+    Resposta: D
    
   3. Qual dos seguintes é um sistema operativo servidor popular?
 
@@ -39,7 +39,7 @@ Quando acabares, carrega no botão "Commit Changes".
     c) Ubuntu Server
     d) Android
     
-    Resposta: ...
+    Resposta: C
 
   4. Qual é o papel de um servidor num modelo cliente-servidor?
 
@@ -48,7 +48,7 @@ Quando acabares, carrega no botão "Commit Changes".
     c) Atuar como uma estação de trabalho independente
     d) Facilitar a comunicação ponto a ponto
     
-    Resposta: ...
+    Resposta:  B 
 
   5. Qual dos seguintes protocolos é mais usado para aceder remotamente a servidores?
 
@@ -57,60 +57,75 @@ Quando acabares, carrega no botão "Commit Changes".
     c) SSH
     d) SMTP
     
-    Resposta: ...
+    Resposta:  B 
 
 ## P2 - Indica, sequencialmnente, os comandos para realizar as seguintes instruções: (7.5v)
 
   1. Cria um diretório com o nome "ex1", entra no mesmo, e cria 3 ficheiros vazios com os nomes "f1", "f2", "f3". No fim, lista os conteúdos do diretório atual.
 
     Resposta:
-    ...
+    mkdir ex1
+    cd ex1
+    touch f1 f2 f3
+    ls
     
   2. Assumindo que estás no diretório "ex1", renomeia os ficheiros "f1" e "f2" para que acabem com "_antigo", e cria cópias dos mesmos.
 
     Resposta:
-    ...
+     mv f1 f1_antigo
+    mv f2 f2_antigo
+    cp f1_antigo f1_copia
+    cp f2_antigo f2_copia
 
   3. Assumindo que estás no diretório "ex1", cria o diretório "ex2", e move os ficheiros copiados no exercício anterior para o novo diretório. Seguidamente, apaga os ficheiros originais.
 
     Resposta:
-    ...
+    mkdir ex2
+    mv f1_copia f2_copia ex2/
+    cd ex2
+    rm ../f1_antigo ../f2_antigo
 
   4. Atualiza os repositórios de *packages* para garantir acesso às *packages* mais recentes, e instala o serviço **htop**.
 
     Resposta:
-    ...
+     sudo apt update
+    sudo apt install htop
 
   5. Cria um novo utilizador com o teu primeiro nome, e com o diretório "/home/nome_de_utilizador". Mostra a informação (ID) do utilizador criado.
 
     Resposta:
-    ...
+     sudo adduser nome_de_utilizador
+    id nome_de_utilizador
 
 ## P3 - Realiza os seguintes exercícios, com respostas detalhadas: (6v)
 
   1. Indica alguns aspetos que diferenciam um SO cliente de um SO servidor.
 
     Resposta:
-    ...
+       As diferenças que existem num SO Cliente e de um SO Servidor, e que no SO Cliente é que normalmente interage diretamente com os utilizadores através de qualquer interface com o utilizador, e também inicia sempre com os pedidos aos servidores e normalmente conecta-se a um pequeno número de servidores de uma só vez.
      
   2. Explica a importância de otimizar um sistema operativo servidor, com exemplos de técnicas para otimização.
 
     Resposta:
-    ...
+    A otimização de um sistema operacional servidor é essencial para garantir alto desempenho, disponibilidade, segurança e eficiência dos serviços oferecidos. Exemplos de técnicas de otimização incluem ajustes de parâmetros do kernel, implementação de redundância e failover, configuração de firewalls, atualizações regulares de segurança, gerenciamento eficiente de recursos e otimização de energia. 
 
   3. Descreve o processo de instalar e configurar um servidor web num SO servidor, incluindo as etapas necessárias.
 
     Resposta:
-    ...
+    Primeiro temos que escolher o software depois temos que instalar o software depoius de instalaremos temos que fazer uma configuração basica, depois temos que fazer uma configuração de hospedagem e tambem de segurança, em seguida temos que fazer os testes e a resolução de problemas, a otimização de desempenho e o monitoramento e a manutenção.
 
 ## P4 - Indica os comandos **git** para realizar as seguintes operações: (4v)
 
   1. Considera que estás no ramo 'master' de um repositório git criado localmente. Associa este repositório ao repositório remoto contido no url 'https://github.com/SO/OMeuRepositorioRemoto'. Altera o nome do ramo atual para 'main', e envia os *commits* já feitos localmente para o repositório remoto.
 
     Resposta:
-    ...
+      git remote add origin https://github.com/jokinhabravo/tomas.git
+git branch -M main
+git push -u origin main
 
   2. Considera que estás na pasta raiz do teu repositório local, onde atualizaste um ficheiro de nome 'index.html'. Envia **apenas** esta atualização para o teu repositório remoto, com uma mensagem de commit apropriada.
 
     Resposta:
-    ...
+    git add index.html
+    git commit -m "Atualização do arquivo index.html"
+    git push origin branch_name
